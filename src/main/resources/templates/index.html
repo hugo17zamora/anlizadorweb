@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>CyberRadar - Inicio</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <main>
+            <!--Título y descripción-->
+            <h1>CyberRadar - Analizador de Seguridad Web</h1>
+            <p>Evalúa automáticamente la seguridad de cualquier sitio web.<br>
+            Introduce una URL para analizar su seguridad:</p>
+            <!--Campo para introducir URL-->
+            <form action="/analizar" method="post">
+                <input type="url" name="url" placeholder="https://ejemplo.com" required>
+                <!--Botón analizar-->
+                <button type="submit">Analizar</button>
+            </form>
+            <!--Contenedores explicativos con botón para saber más información-->
+            <section class="container">
+                <div class="card">
+                    <h3>Seguridad de conexión</h3>
+                    <p>Valora el cifrado, la integridad y la autenticidad de los datos intercambiados entre el servidor y el cliente.</p>
+                    <a href="/seguridad-conexion" class="btn-sabermas">
+                        Saber más
+                    </a>
+                </div>
+                <div class="card">
+                    <h3>Seguridad del servidor</h3>
+                    <p>Analiza cabeceras de seguridad y configuraciones que protegen al usuario frente a ataques.</p>
+                    <a href="/seguridad-servidor" class="btn-sabermas">
+                        Saber más
+                    </a>
+                </div>
+                <div class="card">
+                    <h3>Dominio, DNS y propietarios</h3>
+                    <p>Evalúa la seguridad asociada a la infraestructura del dominio y la confianza.</p>
+                    <a href="/dominio-dns" class="btn-sabermas">
+                        Saber más
+                    </a>
+                </div>
+                <div class="card">
+                    <h3>Cumplimiento legal y privacidad</h3>
+                    <p>Valora el cumplimiento normativo, la transparencia y la privacidad del usuario.</p>
+                    <a href="/legal-privacidad" class="btn-sabermas">
+                        Saber más
+                    </a>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Información - Seguridad de conexión</title>
+        <link rel="stylesheet" href="/info.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Seguridad de conexión</h1>
+            <div class="card">
+                <p>Valora el cifrado, la integridad y la autenticidad de los datos intercambiados entre el servidor y el cliente.</p>
+                <h2>Aspectos analizados:</h2>
+                <div class="criterio">
+                    <h3>Uso de HTTPS</h3>
+                    <p>
+                        Comprueba si el sitio web utiliza HTTPS para proteger las comunicaciones entre el navegador y el servidor.
+                    </p>
+                    <p>
+                        HTTPS cifra la información intercambiada, evitando que terceros puedan
+                        interceptar o modificar datos sensibles como contraseñas o información
+                        personal. Sin HTTPS, la comunicación es vulnerable a diferentes ataques.
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>Validez del certificado digital</h3>
+                    <p>
+                        Verifica que el certificado SSL/TLS del sitio web se encuentre vigente.
+                    </p>
+                    <p>
+                        El certificado permite comprobar la identidad del sitio web. Si está
+                        caducado o no es válido, disminuye la confianza en la página y pueden
+                        aumentar los riesgos de seguridad.
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>Tipo de firma del certificado</h3>
+                    <p>
+                        Analiza si el certificado ha sido emitido por una entidad reconocida o
+                        si se trata de un certificado autofirmado.
+                    </p>
+                    <p>
+                        Los certificados autofirmados no ofrecen garantías suficientes sobre la
+                        identidad del sitio web, por lo que pueden representar un mayor riesgo
+                        para los usuarios.
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>Autoridad de Certificación (CA)</h3>
+                    <p>
+                        Comprueba qué Autoridad de Certificación ha emitido el certificado digital.
+                    </p>
+                    <p>
+                        Las CA reconocidas verifican la identidad de los sitios web y proporcionan
+                        una cadena de confianza que permite garantizar la autenticidad del certificado.
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>Versión TLS utilizada</h3>
+                    <p>
+                        Analiza la versión del protocolo SSL/TLS utilizada por el servidor.
+                    </p>
+                    <p>
+                        Las versiones SSL 2.0, SSL 3.0, TLS 1.0 y TLS 1.1 se consideran obsoletas
+                        debido a la existencia de vulnerabilidades conocidas. TLS 1.2 y TLS 1.3
+                        ofrecen mecanismos criptográficos más seguros y son las versiones recomendadas
+                        actualmente.
+                    </p>
+                </div>
+                <a href="/" class="btn-volver">
+                    Volver 
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+main {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.resultado {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.puntuacion {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #22c55e;
+}
+
+.label {
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.botones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.botones a {
+    text-decoration: none;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background: #22c55e;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+button.secundario {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+button.secundario:hover {
+    background: #333;
+}
+
+.volver {
+    color: #888;
+    text-decoration: none;
+}
+
+.volver:hover {
+    color: #fff;
+}

@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.resumen {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.resumen p {
+    color: #888;
+}
+
+.resumen .puntuacion {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.resumen .puntuacion span {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.card p {
+    color: #888;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.volver {
+    display: inline-block;
+    color: #888;
+    text-decoration: none;
+}
+
+.volver:hover {
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.badge-ok{
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.badge-mid{
+    color: #f57c00;
+    font-weight: 600;
+}
+
+.badge-bad{
+    color: #d32f2f;
+    font-weight: 600;
+}

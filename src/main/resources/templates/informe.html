@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>CyberRadar - Informe completo</title>
+        <link rel="stylesheet" href="/informe.css">
+    </head>
+    <body>
+        <main>
+            <!--Título-->
+            <h1>Informe completo</h1>
+            <div class="resumen">
+                <!--URL-->
+                <p th:text="'URL analizada: ' + ${url}"></p>
+                <!--Puntuación-->
+                <p class="puntuacion" th:text="'Puntuación: ' + ${puntuacion}"></p>
+            </div>
+            <!--Mostrar punto analizado y resultado-->
+            <div class="cards">
+                <!-- Seguridad de conexión -->
+                <div class="card">
+                    <h3>Seguridad de conexión</h3>
+                    <p>
+                        Uso de HTTPS:<br>
+                        <span th:class="${#strings.contains(https, 'Sí') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${https}">
+                        </span>
+                    </p>
+                    <p>
+                        Certificado válido:<br>
+                        <span th:class="${#strings.contains(certificado, 'Sí') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${certificado}">
+                        </span>
+                    </p>
+                    <p>
+                        Certificado autofirmado:<br>
+                        <span th:class="${#strings.contains(autofirmado, 'No') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${autofirmado}">
+                        </span>
+                    </p>
+                    <p>
+                        Autoridad certificadora:<br>
+                        <span th:class="${#strings.contains(ca, 'Confiable') ? 'badge-ok' :
+                                        (#strings.contains(ca, 'Poco') ? 'badge-mid' : 'badge-bad')}"
+                            th:text="${ca}">
+                        </span>
+                    </p>
+                    <p> 
+                        Versión TLS:<br>
+                        <span th:class="${#strings.contains(tls, 'Seguro') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${tls}">
+                        </span>
+                    </p>
+                </div>
+                <!-- Seguridad servidor -->
+                <div class="card">
+                    <h3>Seguridad del servidor</h3>
+                    <p>
+                        CSP:<br>
+                        <span th:class="${#strings.contains(csp, 'Sí') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${csp}">
+                        </span>
+                    </p>
+                    <p>
+                        X-Frame-Options:<br>
+                        <span th:class="${#strings.contains(xFrame, 'Seguro') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${xFrame}">
+                        </span>
+                    </p>
+                    <p>
+                        X-Content-Type-Options:<br>
+                        <span th:class="${#strings.contains(xContent, 'Seguro') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${xContent}">
+                        </span>
+                    </p>
+                    <p>
+                        Referrer-Policy:<br>
+                        <span th:class="${#strings.contains(referrer, 'Seguro') ? 'badge-ok' :
+                                        (#strings.contains(referrer, 'Intermedio') ? 'badge-mid' : 'badge-bad')}"
+                            th:text="${referrer}">
+                        </span>
+                    </p>
+                    <p>
+                        Permissions-Policy:<br>
+                        <span th:class="${#strings.contains(permissions, 'Seguro') ? 'badge-ok' :
+                                        (#strings.contains(permissions, 'Intermedio') ? 'badge-mid' : 'badge-bad')}"
+                            th:text="${permissions}">
+                        </span>
+                    </p>
+                </div>
+                <!-- Dominio -->
+                <div class="card">
+                    <h3>Dominio, DNS y propietario</h3>
+                    <p>
+                        DNSSEC:<br>
+                        <span th:class="${#strings.contains(dnssec, 'Sí') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${dnssec}">
+                        </span>
+                    </p>
+                    <p>
+                        DNS:<br>
+                        <span th:class="${#strings.contains(dns, 'Seguro') ? 'badge-ok' :
+                                        (#strings.contains(dns, 'Intermedio') ? 'badge-mid' : 'badge-bad')}"
+                            th:text="${dns}">
+                        </span>
+                    </p>
+                    <p>
+                        Antigüedad dominio:<br>
+                        <span th:class="${#strings.contains(antiguo, 'Seguro') ? 'badge-ok' :
+                                        (#strings.contains(antiguo, 'Intermedio') ? 'badge-mid' : 'badge-bad')}"
+                            th:text="${antiguo}">
+                        </span>
+                    </p>
+                    <p>
+                        Lista negra:<br>
+                        <span th:class="${#strings.contains(ln, 'Seguro') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${ln}">
+                        </span>
+                    </p>
+                </div>
+                <!-- Privacidad -->
+                <div class="card">
+                    <h3>Cumplimiento legal y privacidad</h3>
+                    <p>
+                        Política de privacidad:<br>
+                        <span th:class="${#strings.contains(pp, 'Sí') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${pp}">
+                        </span>
+                    </p>
+                    <p>
+                        Aviso de Cookies:<br>
+                        <span th:class="${#strings.contains(cookies, 'Sí') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${cookies}">
+                        </span>
+                    </p>
+                    <p>
+                        Aviso legal:<br>
+                        <span th:class="${#strings.contains(aviso, 'Sí') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${aviso}">
+                        </span>
+                    </p>
+                    <p>
+                        Información de contacto:<br>
+                        <span th:class="${#strings.contains(contacto, 'Sí') ? 'badge-ok' : 'badge-bad'}"
+                            th:text="${contacto}">
+                        </span>
+                    </p>
+                    <p>
+                        Atributos de cookies:<br>
+                        <span th:class="${#strings.contains(atCookies, 'Seguro') ? 'badge-ok' :
+                                        (#strings.contains(atCookies, 'Intermedio') ? 'badge-mid' : 'badge-bad')}"
+                            th:text="${atCookies}">
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <!--Botón volver-->
+            <a th:href="@{/resultado}" class="volver">Volver</a>
+        </main>
+    </body>
+</html>

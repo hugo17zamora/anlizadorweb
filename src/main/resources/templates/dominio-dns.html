@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Información - Dominio, DNS y propietarios</title>
+        <link rel="stylesheet" href="/info.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Dominio, DNS y propietarios</h1>
+            <div class="card">
+                <p>Evalúa la seguridad asociada a la infraestructura del dominio y la confianza.</p>
+                <h2>Aspectos analizados:</h2>
+                <div class="criterio">
+                    <h3>DNSSEC</h3>
+                    <p>
+                        Comprueba si el dominio utiliza DNSSEC para proteger las consultas DNS.
+                    </p>
+                    <p>
+                        DNSSEC añade firmas digitales a las respuestas DNS, permitiendo verificar
+                        que la información recibida es auténtica y evitando que un atacante pueda
+                        redirigir al usuario hacia direcciones falsas.
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>DNS públicos de confianza</h3>
+                    <p>
+                        Verifica si el dominio responde correctamente desde distintos servidores
+                        DNS públicos de confianza.
+                    </p>
+                    <p>
+                        Una respuesta correcta desde diferentes proveedores DNS indica que el
+                        dominio está correctamente configurado y accesible desde múltiples redes.
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>Antigüedad del dominio</h3>
+                    <p>
+                        Analiza la fecha de creación del dominio.
+                    </p>
+                    <p>
+                        Aunque no garantiza la seguridad de un sitio web, los dominios con varios
+                        años de antigüedad suelen generar una mayor confianza que aquellos creados
+                        recientemente.
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>Listas negras</h3>
+                    <p>
+                        Comprueba si el dominio o su dirección IP aparecen en listas negras de
+                        ciberseguridad.
+                    </p>
+                    <p>
+                        La presencia en estas listas puede indicar actividad maliciosa, envío de
+                        spam o la existencia de incidentes de seguridad asociados al sitio web.
+                    </p>
+                </div>
+                <a href="/" class="btn-volver">
+                    Volver 
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, sans-serif;
+    background: black;
+    color: white;
+    padding: 2rem;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1{
+    margin-bottom: 1rem;
+}
+
+h2{
+    margin: 15px;
+    color: #22c55e;
+}
+
+.criterio{
+    margin-bottom: 1rem;
+}
+
+.criterio p{
+    margin: 15px;
+    color: grey;
+}
+
+.btn-volver{
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.7rem 1.2rem;
+    background: #22c55e;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn-volver:hover{
+    background: #16a34a;
+}

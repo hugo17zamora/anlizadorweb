@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Información - Seguridad de servidor</title>
+        <link rel="stylesheet" href="/info.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Seguridad del servidor</h1>
+            <div class="card">
+                <p>Analiza cabeceras de seguridad y configuraciones que protegen al usuario frente a ataques.</p>
+                <h2>Aspectos analizados:</h2>
+                <div class="criterio">
+                    <h3>Content Security Policy (CSP)</h3>
+                    <p>
+                        Comprueba si el servidor implementa la cabecera de seguridad
+                        Content Security Policy.
+                    </p>
+                    <p>
+                        CSP define desde qué ubicaciones puede cargar recursos el navegador.
+                        Su utilización se considera una buena práctica de seguridad, ya que
+                        ayuda a prevenir ataques como Cross-Site Scripting (XSS).
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>X-Frame-Options</h3>
+                    <p>
+                        Analiza si la página utiliza la cabecera X-Frame-Options.
+                    </p>
+                    <p>
+                        Esta cabecera protege frente a ataques de clickjacking al controlar
+                        si una página puede cargarse dentro de un iframe. Los valores
+                        recomendados son <strong>DENY</strong> y <strong>SAMEORIGIN</strong>.
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>X-Content-Type-Options</h3>
+                    <p>
+                        Verifica la existencia de la cabecera X-Content-Type-Options.
+                    </p>
+                    <p>
+                        Esta cabecera impide que el navegador intente adivinar el tipo de
+                        contenido de un archivo. El valor recomendado es
+                        <strong>nosniff</strong>, que obliga al navegador a respetar el tipo
+                        declarado por el servidor.
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>Referrer-Policy</h3>
+                    <p>
+                        Comprueba la política utilizada para compartir información de origen
+                        entre páginas web.
+                    </p>
+                    <p>
+                        Configuraciones como <strong>strict-origin</strong> o
+                        <strong>no-referrer</strong> limitan la información enviada y ofrecen
+                        una mayor protección de la privacidad del usuario.
+                    </p>
+                </div>
+                <div class="criterio">
+                    <h3>Permissions-Policy</h3>
+                    <p>
+                        Analiza la configuración de la cabecera Permissions-Policy.
+                    </p>
+                    <p>
+                        Esta cabecera permite restringir o permitir el acceso a determinadas
+                        funcionalidades del navegador, como la cámara, el micrófono o la
+                        geolocalización, reduciendo así la superficie de ataque.
+                    </p>
+                </div>
+                <a href="/" class="btn-volver">
+                    Volver 
+                </a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>CyberRadar - Resultado</title>
+        <link rel="stylesheet" href="/result.css">
+    </head>
+    <body>
+        <main>
+            <!--Título-->
+            <h1>Resultado del análisis</h1>
+            
+            <!--Puntuación-->
+            <div class="resultado">
+                <!--URL-->
+                <p class="label" th:text="${url}"></p>
+                <p class="puntuacion" th:text="${puntuacion}"></p>
+                <p class="label">Puntuación obtenida por CyberRadar</p>
+            </div>
+            <div class="botones">
+            <!--Botón ver informe-->
+                <a th:href="@{/informe}">
+                    <button>Ver informe</button>
+                </a>
+            <!--Botón descargar pdf-->
+                <a th:href="@{/pdf}">
+                    <button class="secundario">Descargar PDF</button>
+                </a>
+            </div>
+            <!--Botón volver al inicio-->
+            <a href="/" class="volver">Volver al inicio</a>
+        </main>
+    </body>
+</html>
