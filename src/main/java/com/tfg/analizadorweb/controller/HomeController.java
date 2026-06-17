@@ -246,7 +246,7 @@ public class HomeController{
         }
     }
 
-    //Validación de URL (De manera sencilla ahora, intentar mejorar al final)
+    //Validación de URL 
     private boolean esUrlValida(String url){
         //Comprobar que no sea null ni esté vacía
         if(url == null || url.isBlank()){
